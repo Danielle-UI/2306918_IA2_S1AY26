@@ -1,0 +1,240 @@
+/*Danielle Simpson
+2306918
+Web Programming*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    list-style: none;
+}
+
+body{
+    background-image: url('/Assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    background-attachment: fixed;
+}
+
+.landing{
+    background-image: url('./Assets/landing.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 75vh;
+    width: 88%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    color: #8B2F2F;
+    text-shadow: 2px 2px 2px white;
+    font-size: larger;
+}
+
+#welcome{
+    text-align: center;
+}
+
+#welcome button{
+    background-color: rgb(251, 255, 174);
+    border-radius: 3rem;
+    width: 30%;
+    height: 5rem;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 3px;
+}
+
+button{
+    background-color: rgb(251, 255, 174);
+    border-radius: 3rem;
+    padding: 10px;
+}
+
+.toproduct{
+    color: purple;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcbtns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#login{
+    display: none;
+}
+
+#registration{
+    display: none;
+}
+
+span{
+    text-decoration: underline;
+    color: blue;
+    transition: ease;
+}
+
+section{
+    background-color: white;
+    padding: 20px;
+}
+
+form{
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 3px palevioletred;
+    margin: 0 10% 10% 10%;
+    padding: 15px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+span:hover{
+    color: rgb(0, 221, 255);
+    cursor: pointer;
+}
+
+#main img{
+    height: 300px;
+    width: 200px;
+    border: 20px solid lavender;
+    border-radius: 2rem;
+}
+
+dd{
+    width: 240px;
+    min-height: 60px;
+}
+
+dl{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    color: #fb4f14;
+}
+
+header{
+    width: 94%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 5px 5px 3px palevioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+#about{
+    text-align: center;
+    color: palevioletred;
+}
+
+.cart{
+    display: flex;
+    width: 94%;
+    gap: 50px;
+    background-color: transparent;
+}
+
+#cart_products{
+    width: 75%;
+}
+
+#proceed{
+    height: max-content;
+    width: 20%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 3px palevioletred;
+}
+
+.cart_items{
+    color: purple;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.qty{
+    width: 40px;
+    text-align: center;
+}
+
+.cartimg{
+    height: 150px;
+    width: 150px;
+}
+
+#cart_products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 1rem;
+    height: max-content;
+}
+
+/*Styling for checkout page*/
+.checkoutpage{
+    display: flex;
+    gap: 20px;
+    width: 94%;
+}
+
+.shippingform{
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+}
+
+.Payment{
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+}
+
+.reference{
+display: block;
+padding-left: 1.25in; /* space for the hanging indent */
+text-indent: -1.25in; /* negative indent creates hanging indent */
+margin-bottom: 0.5rem;
+word-wrap: break-word;
+}
+
+
+
