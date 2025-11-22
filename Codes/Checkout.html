@@ -1,65 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Danielle Simpson
+    ID: 2306918
+    Web Programming: CIT2011
+    Firday @7pm-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <title>Checkout</title>
 </head>
-<body>
-    <a href="Index.html"><button>signout</button></a>
-    <h1>Checkout</h1>
+<body id="checkoutPage">
+    <div class="close">
+        <h1>Checkout</h1>
+        <button id="closebtn"><i class="material-icons">close</i></button>
+    </div>
+    
     <!--form for shipping address and card info-->
     <div class="checkoutpage">
     <form class="shippingform">
-        <h2>Shipping Details</h2>
-        <label for="fullname">Full Name:</label><br>
-        <input type="text" id="fullname" name="fullname" required><br><br>
+        <!--Shipping details form Section-->
+        <div>
+            <h2>Shipping Details</h2>
 
-        <label for="address">Country:</label><br>
-        <input type="text" id="address" name="address" required><br><br>
+            <label for="address">Country:</label><br>
+            <select id="address" name="address" required>
+                <option value="" disabled selected>--Select Country--</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="JM">Jamaica</option>
+                <option value="UK">United Kingdom</option>
+            </select>
+            <br><br>
 
-        <label for="street">Street:</label><br>
-        <input type="text" id="street" name="street" required><br><br>
+            <div class="formatting">
+                <div>
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname" maxlength="80" required><br><br>
+                </div>
+                <div>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname" maxlength="80" required><br><br>
+                </div>
+                
+            </div>
+            
+            <label for="street">Street:</label><br>
+            <input type="text" id="street" name="street" maxlength="100" required><br><br>
 
-        <label for="city">City:</label><br>
-        <input type="text" id="city" name="city" required><br><br>
+            <div class="formatting">
+                <div>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city" maxlength="100" required><br><br>
+                </div>
+                <div>
+                    <label for="zip">ZIP Code:</label><br>
+                    <input type="number" id="zip" name="zip" required><br><br>
+                </div>
+            </div>
 
-        <label for="zip">ZIP Code:</label><br>
-        <input type="text" id="zip" name="zip" required><br><br>
+            <label for="number">Phone Number</label><br><br>
+            <input type="number" placeholder="eg. 8761234567" id="phone" >
+        </div>
+
+        <br><hr><br>
+        <!--Payment Form Section-->
+        <div>
+            <h2>Payment Information</h2>
+
+            <label for="cardtype">Card Type:</label><br>
+            <select id="cardtype" name="cardtype" required>
+                <option value="" disabled selected>--Select--</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+                <option value="discover">Discover</option>
+            </select><br><br>
+
+            <label for="cardname">Name on Card:</label><br>
+            <input type="text" id="cardname" name="cardname" required><br><br>
+
+            <div class="formatting">
+                <div>
+                    <label for="expiry">Expiry Date:</label><br>
+                    <input type="month" id="expiry" name="expiry" placeholder="MM/YY" required><br><br>
+                </div>
+                <div>
+                    <label for="cvv">CVV:</label><br>
+                    <input type="number" id="cvv" name="cvv" required><br><br>
+                </div>
+            </div>
+
+            <label for="cardnumber">Card Number:</label><br>
+            <input type="number" id="cardnumber" name="cardnumber" placeholder="1234567890123" required><br><br>
+
+            <div>
+                <button type="button" id="placebtn">Place Order</button>
+                <button type="reset">Clear All</button>
+            </div>
+            
+        </div>
         
     </form>
-    <form class="Payment">
-        <h2>Payment Information</h2>
+    <!--Order Summary section to be updated with Javascript-->
+    <section class="proceed">
+        <h2>Order Summary</h2>
+        <div id="summary">
+            
+        </div>
 
-        <label for="cardname">Name on Card:</label><br>
-        <input type="text" id="cardname" name="cardname" required><br><br>
+        <div id="checkoutamt">
 
-        <label for="cardnumber">Card Number:</label><br>
-        <input type="number" id="cardnumber" name="cardnumber" required><br><br>
+        </div>
 
-        <label for="cardtype">Card Type:</label><br>
-        <select id="cardtype" name="cardtype" required>
-            <option value="" disabled selected>--Select--</option>
-            <option value="visa">Visa</option>
-            <option value="mastercard">MasterCard</option>
-            <option value="amex">American Express</option>
-            <option value="discover">Discover</option>
-        </select><br><br>
-
-        <label for="expiry">Expiry Date:</label><br>
-        <input type="month" id="expiry" name="expiry" required><br><br>
-
-        <label for="cvv">CVV:</label><br>
-        <input type="text" id="cvv" name="cvv" required maxlength="3"><br><br>
-
-        <button type="submit">Place Order</button>
-    </form>
+    </section>
     </div>
 
-    <script>
-        name = document.getElementById('fullname').value
-        
+    <script src="../script.js">
+
     </script>
     
 </body>
