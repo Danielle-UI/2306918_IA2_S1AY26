@@ -1,6 +1,3 @@
-/*Danielle Simpson
-2306918
-Web Programming*/
 *{
     padding: 0;
     margin: 0;
@@ -168,9 +165,9 @@ nav ul{
     width: 75%;
 }
 
-#proceed{
+.proceed{
     height: max-content;
-    width: 20%;
+    width: max-content;
     padding: 20px;
     background-color: white;
     border: 2px solid pink;
@@ -214,26 +211,65 @@ nav ul{
     display: flex;
     gap: 20px;
     width: 94%;
+    margin: 0 auto;
+}
+
+.close{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#summary{
+    max-height: 510px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: palevioletred pink;
+}
+
+.formatting{
+    display: flex;
+    gap: 20px;
 }
 
 .shippingform{
-    width: 100%;
+    width: 70%;
     margin: 0;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+.proceed{
+    margin: 0 auto;
+}
+
+    .shippingform{
+    width: 400px;
+    margin: 0 auto;
     line-height: normal;
 }
 
-.Payment{
-    width: 100%;
-    margin: 0;
-    line-height: normal;
-}
+    .checkoutpage{
+        display: flex;
+        flex-direction: column;
+    }
 
-.reference{
-display: block;
-padding-left: 1.25in; /* space for the hanging indent */
-text-indent: -1.25in; /* negative indent creates hanging indent */
-margin-bottom: 0.5rem;
-word-wrap: break-word;
+    #summary{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        max-width: 400px;
+    }
+
+    .proceed{
+        margin: 0 auto;
+    }
+
+@media (max-width: 950px) {
+    *{
+        font-size: 15px;
+    }
+    
 }
 
 
