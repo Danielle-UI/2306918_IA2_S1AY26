@@ -25,6 +25,8 @@ The color palette I chose consisted mainly of pink and white, with a few other p
 Intended Audience
 The Audience Woven Imaginations aim to attract creators and individuals with a strong creative imagination, including teens and adults who enjoy adding a unique touch to personalize gifts and personal items.
 
+Live Hosting: https://danielle-ui.github.io/2306918_IA2_S1AY26/Codes/Index.html
+
 References
 Crotchet tools
 Green, J. (2025, September 11). Hermoso crochet. Pinterest. https://pin.it/3oky1x8BS 
