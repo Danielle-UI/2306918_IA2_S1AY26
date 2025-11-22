@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!--Danielle Simpson
-ID: 2306918
-Web Programming-->
 <html lang="en">
 <head>
+    <!--Danielle Simpson
+    ID: 2306918
+    Web Programming: CIT2011
+    Firday @7pm-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
@@ -11,13 +12,15 @@ Web Programming-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Welcome</title>
 </head>
-<body>
+<body id="indexPage">
+    <!--Welcome Page-->
     <section id="welcome">
         <img src="../Assets/logo.png">
         
         <div class="welcbtns">
             <button id="loginBtn"><b>Login</b></button>
             <button id="registerBtn"><b>Register</b></button>
+            <button id="guest"><b>Guest</b></button>
         </div>
         <br><br>
 
@@ -25,6 +28,7 @@ Web Programming-->
             Already a customer? Click Login to continue shopping.</p>
     </section>
 
+    <!--Login form-->
     <section id="login">
         <img src="../Assets/logo.png" alt="logo" height="30%">
 
@@ -32,10 +36,10 @@ Web Programming-->
             <h1>Welcome Back</h1>
             <p>We've missed you, login to continue shopping</p>
             <label for="name">Username</label>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" id="loginuser" placeholder="Enter your username" required>
 
             <label for="password">Password</label>
-            <input type="password" name="pwd" id="password" placeholder="Enter your password" required>
+            <input type="password" name="pwd" id="loginpassword" placeholder="Enter your password" required>
             <br>
             <button id="login_submit" type="button">Login In</button>
             <p>Don't have an account? <span id="lsignup">Sign Up</span></p>
@@ -43,6 +47,7 @@ Web Programming-->
         
     </section>
 
+    <!--Registration Form-->
     <section id="registration">
         <img src="../Assets/logo.png" alt="logo" height="30%">
         <form action="">
@@ -51,26 +56,26 @@ Web Programming-->
 
             
             <label for="fname">First Name</label>
-            <input type="text" placeholder="Enter your First Name" required>
+            <input type="text" id="fname" placeholder="Enter your First Name" required>
 
             <label for="lname">Last Name</label>
-            <input type="text" placeholder="Enter your Surname" required>
+            <input type="text" id="lname" placeholder="Enter your Surname" required>
             
 
             <label for="name">Username</label>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" id="signupuser" placeholder="Enter your username" required>
 
             <label for="email">email</label>
-            <input type="email" placeholder="Enter your email address" required>
+            <input type="email" id="email" placeholder="Enter your email address" required>
 
             <label for="password">Password</label>
-            <input type="password" name="pwd" id="password" placeholder="Enter your password" required>
+            <input type="password" name="pwd" id="signuppassword" placeholder="Enter your password" required>
 
             <label for="name">Date of Birth</label>
-            <input type="Date" placeholder="Enter your DOB" required>
+            <input type="Date" id="dob" placeholder="Enter your DOB" required>
 
             <label for="conpassword">Confirm Password</label>
-            <input type="password" name="conpwd" id="confirm_password" placeholder="Confirm your password" required>
+            <input type="password" name="conpwd" id="confirmpassword" placeholder="Confirm your password" required>
             <br>
             <button id="signup_submit" type="button">Sign Up</button>
             <p>Already have an account? <span id="slogin">Login</span></p>
@@ -78,48 +83,7 @@ Web Programming-->
         
     </section>
 
-    <script>
-        login_button = document.getElementById('loginBtn')
-        register_button = document.getElementById('registerBtn')
-        welcome = document.getElementById('welcome')
-        login = document.getElementById('login')
-        registration = document.getElementById('registration')
-        log = document.getElementById('login_submit')
-        signup = document.getElementById('signup_submit')
-
-        login_button.addEventListener('click', () =>{
-            login.style.display='contents';
-            welcome.style.display='none';
-        })
-
-        register_button.addEventListener('click', () =>{
-            registration.style.display='contents';
-            welcome.style.display='none';
-        })
-        
-        document.getElementById('slogin').addEventListener('click', () =>{
-            registration.style.display='none';
-            login.style.display='contents';
-    
-        })
-
-        document.getElementById('lsignup').addEventListener('click', () =>{
-            registration.style.display='contents';
-            login.style.display='none';
-        })
-
-        //getting to the main page
-        log.addEventListener('click', () =>{
-            window.location.href = 'Product.html';
-        })
-
-        signup.addEventListener('click', () =>{
-            window.location.href = 'Product.html';
-        })
-
-        
-
-    </script>
+    <script src="../script.js"></script>
     
 </body>
 </html>
