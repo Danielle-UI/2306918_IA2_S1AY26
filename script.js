@@ -8,7 +8,7 @@ if(document.body.id === 'indexPage'){
         signup = document.getElementById('signup_submit')
         guest_button = document.getElementById('guest')
 
-        //Page manipulation
+        //2.a Dynamically update html and css
         login_button.addEventListener('click', () =>{
             login.style.display='contents';
             welcome.style.display='none';
@@ -34,12 +34,13 @@ if(document.body.id === 'indexPage'){
             login.style.display='none';
         })
 
-        //Login Form Validation
+        //2.b Event Handling
+        //2.c Login Form Validation
         log.addEventListener('click', () =>{
                 const login_username = document.getElementById('loginuser').value.trim();
                 const login_pwd = document.getElementById('loginpassword').value.trim();
 
-                //Password vaildation
+                //2.Password vaildation
                 if (!login_username || !login_pwd) {
                     alert("Please fill out all fields.");
                     return;
@@ -60,7 +61,7 @@ if(document.body.id === 'indexPage'){
                 }
             
         })
-
+        //2.b Event Handling
         //2. c) Registration form Validation
         signup.addEventListener('click', () =>{
             const signup_username = document.getElementById('signupuser').value.trim()
@@ -405,6 +406,7 @@ if(document.body.id === 'checkoutPage'){
                 `;
                 ordersum.appendChild(productitem);
             });
+            //2.d Basic Interactivity
             //calculations for order total
         const discount = 0.05; //fixed discount
             const tax = 0.15; //fixed tax
