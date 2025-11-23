@@ -1,77 +1,29 @@
+/*1.c Consistency and Theme*/
+:root {
+    --main-color: palevioletred;
+    --accent-color: rgb(251, 255, 174);
+    --primary-font: 'Courier New', Courier, monospace;
+}
+
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--primary-font);
     list-style: none;
 }
-
+/*1.a element selector*/
 body{
     background-image: url('/Assets/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    display: flex;
+    display: flex;  /*1.b Flexbox use*/
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     margin: 20px;
     background-attachment: fixed;
-}
-
-.landing{
-    background-image: url('./Assets/landing.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 75vh;
-    width: 88%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    color: #8B2F2F;
-    text-shadow: 2px 2px 2px white;
-    font-size: larger;
-}
-
-#welcome{
-    text-align: center;
-}
-
-#welcome button{
-    background-color: rgb(251, 255, 174);
-    border-radius: 3rem;
-    width: 30%;
-    height: 5rem;
-    font-size: 1.5rem;
-    box-shadow: 5px 5px 3px;
-}
-
-button{
-    background-color: rgb(251, 255, 174);
-    border-radius: 3rem;
-    padding: 10px;
-}
-
-.toproduct{
-    color: purple;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.welcbtns{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#login{
-    display: none;
-}
-
-#registration{
-    display: none;
 }
 
 span{
@@ -89,7 +41,7 @@ form{
     background-color: white;
     border: 2px solid pink;
     border-radius: 2rem;
-    box-shadow: 5px 5px 3px palevioletred;
+    box-shadow: 5px 5px 3px var(--main-color);
     margin: 0 10% 10% 10%;
     padding: 15px;
     line-height: 2rem;
@@ -97,16 +49,10 @@ form{
     flex-direction: column;
 }
 
-span:hover{
-    color: rgb(0, 221, 255);
-    cursor: pointer;
-}
-
-#main img{
-    height: 300px;
-    width: 200px;
-    border: 20px solid lavender;
-    border-radius: 2rem;
+button{
+    background-color: var(--accent-color);
+    border-radius: 3rem;
+    padding: 10px;
 }
 
 dd{
@@ -121,18 +67,11 @@ dl{
     flex-wrap: wrap;
 }
 
-
-.price{
-    display: flex;
-    justify-content: space-between;
-    color: #fb4f14;
-}
-
 header{
     width: 94%;
     height: 100px;
     background-color: white;
-    box-shadow: 5px 5px 3px palevioletred;
+    box-shadow: 5px 5px 3px var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,14 +83,39 @@ a{
     text-decoration: none;
 }
 
-nav ul{
+/*1.a class selector*/
+.landing{
+    background-image: url('./Assets/landing.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 75vh;
+    width: 88%;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    color: #8B2F2F;
+    text-shadow: 2px 2px 2px white;
+    font-size: larger;
 }
 
-#about{
-    text-align: center;
-    color: palevioletred;
+.toproduct{
+    color: purple;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcbtns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    color: #fb4f14;
 }
 
 .cart{
@@ -159,20 +123,6 @@ nav ul{
     width: 94%;
     gap: 50px;
     background-color: transparent;
-}
-
-#cart_products{
-    width: 75%;
-}
-
-.proceed{
-    height: max-content;
-    width: max-content;
-    padding: 20px;
-    background-color: white;
-    border: 2px solid pink;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 3px palevioletred;
 }
 
 .cart_items{
@@ -192,21 +142,6 @@ nav ul{
     height: 150px;
     width: 150px;
 }
-
-#cart_products{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-    background-color: white;
-    border: 2px solid pink;
-    border-radius: 1rem;
-    height: max-content;
-}
-
-/*Styling for checkout page*/
 .checkoutpage{
     display: flex;
     gap: 20px;
@@ -218,13 +153,6 @@ nav ul{
     display: flex;
     justify-content: space-between;
     width: 90%;
-}
-
-#summary{
-    max-height: 510px;
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: palevioletred pink;
 }
 
 .formatting{
@@ -241,35 +169,102 @@ nav ul{
 
 .proceed{
     margin: 0 auto;
+    height: max-content;
+    width: max-content;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 3px var(--main-color);
 }
 
+/*1.a ID selector*/
+#welcome{
+    text-align: center;
+}
+
+#login{
+    display: none;
+}
+
+#registration{
+    display: none;
+}
+
+#about{
+    text-align: center;
+    color: var(--main-color);
+}
+
+/*1.b adapts dynamically*/
+#summary{
+    max-height: 510px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) pink;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    max-width: 400px;
+}
+
+#cart_products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 1rem;
+    height: max-content;
+    width: 75%;
+}
+
+/*1.a descendant selector selector*/
+#welcome button{
+    background-color: var(--accent-color);
+    border-radius: 3rem;
+    width: 30%;
+    height: 5rem;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 3px;
+}
+
+#main img{
+    height: 300px;
+    width: 200px;
+    border: 20px solid lavender;
+    border-radius: 2rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+/*1.a Pseudoclass selector*/
+span:hover{
+    color: rgb(0, 221, 255);
+    cursor: pointer;
+}
+
+/*1.b adapts dynamically*/
+@media (max-width: 950px) {
+    *{
+        font-size: 15px;
+    }
     .shippingform{
     width: 400px;
     margin: 0 auto;
     line-height: normal;
-}
+    }
 
     .checkoutpage{
         display: flex;
         flex-direction: column;
     }
-
-    #summary{
-        display: flex;
-        flex-direction: row;
-        overflow: auto;
-        max-width: 400px;
-    }
-
-    .proceed{
-        margin: 0 auto;
-    }
-
-@media (max-width: 950px) {
-    *{
-        font-size: 15px;
-    }
-    
 }
 
 
